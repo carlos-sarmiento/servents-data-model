@@ -1,0 +1,11 @@
+[project]
+name = "servents-data-model"
+version = "0.4.0"
+description = "Servents is a custom_component for home assistant to allow creation and tracking of entities programatically"
+readme = "README.md"
+requires-python = ">=3.13.2"
+dependencies = ["pyserde>=0.23.0"]
+authors = [{ name = "Carlos Sarmiento", email = "carlos5678@gmail.com" }]
+
+[dependency-groups]
+dev = ["homeassistant>=2025.11.0", "pytest>=8.3.0"]
