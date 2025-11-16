@@ -54,6 +54,7 @@ class SensorConfig(EntityConfig):
     unit_of_measurement: str | None = None
     state_class: SensorStateClass | None = None
     options: list[str] | None = None
+    entity_ids: list[EntityID] | None = None
 
     def __post_init__(self) -> None:
         if self.options is not None and self.device_class is None:
