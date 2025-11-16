@@ -1,6 +1,6 @@
 [project]
 name = "servents-data-model"
-version = "0.5.3"
+version = "0.6.0"
 description = "Servents is a custom_component for home assistant to allow creation and tracking of entities programatically"
 readme = "README.md"
 requires-python = ">=3.13.2"

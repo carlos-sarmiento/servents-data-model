@@ -2016,7 +2016,7 @@ wheels = [
 
 [[package]]
 name = "servents-data-model"
-version = "0.5.3"
+version = "0.6.0"
 source = { virtual = "." }
 dependencies = [
     { name = "pyserde" },
