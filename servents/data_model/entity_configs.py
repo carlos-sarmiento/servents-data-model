@@ -85,6 +85,12 @@ class BinarySensorConfig(EntityConfig):
     entity_type: EntityType = EntityType.BINARY_SENSOR
     device_class: BinarySensorDeviceClass | None = None
 
+    def __post_init__(self) -> None:
+        if self.entity_category == "config":
+            raise ValueError(
+                "Binary sensors cannot have the 'config' entity category.",
+            )
+
 
 @serde
 @dataclass(kw_only=True)
