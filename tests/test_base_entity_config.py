@@ -22,6 +22,8 @@ class TestEntityConfig:
         assert deserialized.fixed_attributes == {}
         assert deserialized.entity_category is None
         assert deserialized.disabled_by_default is False
+        assert deserialized.restore_state is True
+        assert deserialized.previous_servent_ids is None
         assert deserialized.app_name is None
         assert deserialized.device_definition is None
 
@@ -54,6 +56,8 @@ class TestEntityConfig:
             fixed_attributes={"key1": "value1", "key2": 123},
             entity_category="diagnostic",
             disabled_by_default=True,
+            restore_state=False,
+            previous_servent_ids=["old_test_servent"],
             app_name="test_app",
         )
 
@@ -67,6 +71,8 @@ class TestEntityConfig:
         assert deserialized.fixed_attributes == config.fixed_attributes
         assert deserialized.entity_category == config.entity_category
         assert deserialized.disabled_by_default == config.disabled_by_default
+        assert deserialized.restore_state == config.restore_state
+        assert deserialized.previous_servent_ids == config.previous_servent_ids
         assert deserialized.app_name == config.app_name
 
     def test_entity_config_default_state_types(self):

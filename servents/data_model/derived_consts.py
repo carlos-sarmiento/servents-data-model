@@ -17,3 +17,15 @@ SensorDeviceClass = Literal['date', 'enum', 'timestamp', 'absolute_humidity', 'a
 SensorStateClass = Literal['measurement', 'measurement_angle', 'total', 'total_increasing']
 
 SwitchDeviceClass = Literal['outlet', 'switch']
+
+CoverDeviceClass = Literal['awning', 'blind', 'curtain', 'damper', 'door', 'garage', 'gate', 'shade', 'shutter', 'window']
+
+ValveDeviceClass = Literal['water', 'gas']
+
+TextMode = Literal['password', 'text']
+
+EventDeviceClass = Literal['doorbell', 'button', 'motion']
+
+ClimateHVACMode = Literal['off', 'heat', 'cool', 'heat_cool', 'auto', 'dry', 'fan_only']
+
+ClimateTemperatureUnit = Literal['C', 'F']

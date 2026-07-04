@@ -19,6 +19,11 @@ class TestDeviceConfig:
         assert deserialized.manufacturer is None
         assert deserialized.model is None
         assert deserialized.version is None
+        assert deserialized.suggested_area is None
+        assert deserialized.configuration_url is None
+        assert deserialized.sw_version is None
+        assert deserialized.hw_version is None
+        assert deserialized.serial_number is None
         assert deserialized.app_name is None
         assert deserialized.is_global is False
 
@@ -29,6 +34,11 @@ class TestDeviceConfig:
             manufacturer="Test Manufacturer",
             model="Test Model",
             version="1.0.0",
+            suggested_area="Kitchen",
+            configuration_url="https://example.test/device",
+            sw_version="2.0.0",
+            hw_version="rev-a",
+            serial_number="serial-123",
             app_name="test_app",
             is_global=True,
         )
@@ -41,5 +51,10 @@ class TestDeviceConfig:
         assert deserialized.manufacturer == config.manufacturer
         assert deserialized.model == config.model
         assert deserialized.version == config.version
+        assert deserialized.suggested_area == config.suggested_area
+        assert deserialized.configuration_url == config.configuration_url
+        assert deserialized.sw_version == config.sw_version
+        assert deserialized.hw_version == config.hw_version
+        assert deserialized.serial_number == config.serial_number
         assert deserialized.app_name == config.app_name
         assert deserialized.is_global == config.is_global

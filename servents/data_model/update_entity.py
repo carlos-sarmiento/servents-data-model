@@ -8,5 +8,7 @@ from serde import serde
 @dataclass
 class ServentUpdateEntity:
     servent_id: str
-    state: Any | None
+    state: Any | None = None
     attributes: dict = field(default_factory=dict)
+    available: bool | None = None
+    merge_attributes: bool | None = None
