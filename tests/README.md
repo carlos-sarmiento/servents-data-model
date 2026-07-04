@@ -1,5 +1,8 @@
 # Entity Configs Tests
 
+This directory contains tests for the ServEnts data-model entity config
+classes.
+
 ## Running the Tests
 
 ```bash
