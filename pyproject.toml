@@ -8,4 +8,23 @@ dependencies = ["pyserde>=0.31.6"]
 authors = [{ name = "Carlos Sarmiento", email = "carlos5678@gmail.com" }]
 
 [dependency-groups]
-dev = ["homeassistant>=2025.11.0", "pytest>=8.3.0"]
+dev = [
+    "homeassistant>=2025.11.0",
+    "pyright>=1.1.391",
+    "pytest>=8.3.0",
+    "ruff>=0.9.1",
+]
+
+[tool.pyright]
+include = ["servents", "tests"]
+exclude = ["build", ".venv"]
+pythonVersion = "3.14"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "W"]
